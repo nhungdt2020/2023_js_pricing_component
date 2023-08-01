@@ -1,0 +1,172 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight: 700;
+    color: gray;
+    background-color: hsl(240, 78%, 98%);
+    /* background-image: url('./images/bg-top.svg') ; */
+}
+
+.container{
+    padding: 5% 10%;
+    color: hsl(233, 13%, 49%);
+    
+}
+
+/*---------------- top container--------------- */
+.top-container{
+    margin: 5%;
+    text-align: center;
+    
+}
+
+.title{
+    font-size: 2rem;
+}
+
+.pricing-type{
+    display: flex;
+    width: 30%;
+    margin: 2% auto;
+}
+
+.type{
+flex: 10%;
+}
+/*---------------- main container -------------*/
+.main-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    flex: 30%;
+    padding: 5%;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.card-title{
+    margin: 5% auto;
+}
+
+.card-master{
+    background-color: bisque;
+}
+.card-pro{
+    flex: 30%;
+    padding: 5%;
+    text-align: center;
+    background-color: hsl(236, 72%, 79%);
+    border-radius: 10px;
+    margin-top: -2%;
+    margin-bottom: -2%;
+}
+.card-basic{
+    background-color: aquamarine;
+}
+
+/* ----------detail in card------------------- */
+
+.pricing{
+    font-size: 3rem;
+    margin: 10%;
+}
+
+
+p{
+    margin: 5%;
+}
+
+hr{
+    color: hsl(233, 13%, 49%);
+}
+
+button{
+    background-color: white;
+    border-radius: 5px;
+    padding: 2% 20%;
+    border: solid 1px hsl(240, 78%, 98%);
+    color: grey;
+    margin: 10%;
+    font-weight: 300;
+}
+
+
+
+/* ---------toggle switch --------------------*/
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+    display: inline;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 50px;
+	height: 20px;
+	background: hsl(237, 63%, 64%);
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.1s;
+}
+
+input:checked + label {
+	background: hsl(236, 72%, 79%);
+}
+
+input:checked + label:after {
+	left: calc(100% - 2px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 15px;
+}
+
+/* ------------------------------------------------------------------- */
+@media (max-width: 800px) {
+    /* For mobile phones: */
+    .main-container{
+        flex-direction: column;
+    }
+
+    .card{
+        flex: 100%;
+        margin: 5%;
+    }
+
+    .card-pro{
+        flex: 100%;
+        margin: 5%;
+    }
+
+    .pricing-type{
+        display: flex;
+        width: 80%;
+        margin: 2% auto;
+    }
+    
+
+  }
+  
