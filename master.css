@@ -3,13 +3,19 @@
     margin: 0;
 }
 
+body, html{
+    min-height: 100%;
+}
+
 body{
+
     font-family: 'Montserrat';
     font-size: 15px;
     font-weight: 700;
     color: gray;
-    background-color: hsl(240, 78%, 98%);
-    /* background-image: url('./images/bg-top.svg') ; */
+    background:  url('./images/bg-top.svg') right top no-repeat, url('./images/bg-bottom.svg') left bottom no-repeat, hsl(240, 78%, 98%); 
+    background-size: 200px, 200px;
+
 }
 
 .container{
@@ -20,7 +26,7 @@ body{
 
 /*---------------- top container--------------- */
 .top-container{
-    margin: 5%;
+    margin: 2% 5% 5% 5%;
     text-align: center;
     
 }
@@ -33,6 +39,7 @@ body{
     display: flex;
     width: 30%;
     margin: 2% auto;
+    justify-content: center;
 }
 
 .type{
@@ -44,33 +51,42 @@ flex: 10%;
     flex-direction: row;
 }
 
-.card{
+.card-basic,.card-master{
+    box-sizing: border-box;
     flex: 30%;
     padding: 5%;
     text-align: center;
-    background-color: white;
     border-radius: 10px;
+    background-color: white;
+    z-index: 10;
+
 }
 
 .card-title{
     margin: 5% auto;
 }
 
-.card-master{
+/* .card-master{
     background-color: bisque;
-}
-.card-pro{
-    flex: 30%;
-    padding: 5%;
-    text-align: center;
-    background-color: hsl(236, 72%, 79%);
-    border-radius: 10px;
-    margin-top: -2%;
-    margin-bottom: -2%;
 }
 .card-basic{
     background-color: aquamarine;
+} */
+.card-pro{
+    box-sizing: border-box;
+    flex: 30%;
+    padding: 7% 5%;
+    text-align: center;
+    /* background-color: hsl(236, 72%, 79%); */
+    border-radius: 10px;
+    margin-top: -2%;
+    margin-bottom: -2%;
+    color: hsl(240, 78%, 98%);
+    background-image: linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%)) ;
+
 }
+
+
 
 /* ----------detail in card------------------- */
 
@@ -85,20 +101,29 @@ p{
 }
 
 hr{
-    color: hsl(233, 13%, 49%);
+    color: hsl(240, 78%, 98%);
 }
 
 button{
-    background-color: white;
+    background-color: hsl(236, 72%, 79%);
     border-radius: 5px;
-    padding: 2% 20%;
+    padding: 3%;
     border: solid 1px hsl(240, 78%, 98%);
-    color: grey;
-    margin: 10%;
-    font-weight: 300;
+    margin: 10% auto;
+    width: 100%;
+    font-weight:700;
+    text-transform: uppercase;
 }
 
+.btn{
+    background-image: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%)) ; 
+    color:  hsl(240, 78%, 98%);
+}
 
+.btn-pro{
+    background-color: white;
+    color:  hsl(237, 63%, 64%);
+}
 
 /* ---------toggle switch --------------------*/
 input[type=checkbox]{
@@ -145,7 +170,7 @@ label:active:after {
 }
 
 /* ------------------------------------------------------------------- */
-@media (max-width: 800px) {
+@media (max-width: 376px) {
     /* For mobile phones: */
     .main-container{
         flex-direction: column;
@@ -167,6 +192,8 @@ label:active:after {
         margin: 2% auto;
     }
     
-
+    .title{
+        font-size: 2rem;
+    }
   }
   
